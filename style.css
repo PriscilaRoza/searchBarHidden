@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+body{
+    margin:0;
+    height: 100vh;
+    width: 100vh;
+    background: linear-gradient(#79e4a6, #1bc296);
+}
+.search-box{
+    /* para colocar o intem onde quiser */
+    position: absolute;
+    /* para jogar o input no meio da tela */
+    top:50%;
+    left:50%;
+    /* para ficar centralizado bem no centro */
+    transform: translate(-50%, -50%);
+    background: #0a1b2d;
+    height: 40px;
+    padding: 10px;
+    border-radius: 40px;
+    display: flex;
+    /* joga um item totalmente para esquerda e o outro totalmente para direita */
+    justify-content: space-between;
+    /* alinha os icones verticalmente */
+    align-items: center;
+}
+.search-txt{
+    /* tira a borda do input */
+    border: none;
+    /* tira a cor branca padrão do input e deixa transparente */
+    background: none;
+    /* tira a borda do input quando clica */
+    outline: none;
+    padding: 0;
+    color: #f0f5fb;
+    font-size: 16px;
+    /* altura do input */
+    line-height: 40px;
+    width: 0;
+    transition: .5s;
+    font-family: 'Open Sans';
+}
+/* altera todos os placeholders do html */
+::-webkit-input-placeholder{
+    color: #1e3754;
+}
+
+.search-btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #0a1b2d;
+    display: flex;
+    /* alinha horizontalmente */
+    justify-content: center;
+    /* alinha verticalmente */
+    align-items: center;
+    transition: .5s;
+}
+/* quando passar o mouse em cima do search-box o search-txt vai pegar o estilo que vai estar aqui dentro */
+.search-box:hover > .search-txt {
+    width: 240px;
+    padding: 0 6px;
+}
+/* quando passar o mouse em search-box vai alterar o search-btn com as config abaixo */
+.search-box:hover > .search-btn {
+    background: #f0f5fb
+}
